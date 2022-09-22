@@ -1,0 +1,24 @@
+---
+import { Markdown } from "../components/Markdown";
+import { ToastButton } from "../components/ToastButton";
+import { Toaster } from "../components/Toaster";
+import { sharedString } from "@repro/shared-package";
+---
+
+<Toaster client:load />
+
+<main class="p-2 flex flex-col gap-3">
+  <Markdown>
+    {sharedString}
+  </Markdown>
+
+  <div>
+    <ToastButton client:load />
+  </div>
+</main>
+
+<style>
+  body {
+    @apply bg-gray-900 text-slate-100;
+  }
+</style>
